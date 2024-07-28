@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home Page</title>
+        <link rel="preload" href="assets/font/poppins-v21-latin-regular.woff2" fetchpriority="highest" as="font" crossorigin="">
+        <link rel="preload" href="assets/font/poppins-v21-latin-500.woff2" fetchpriority="highest" as="font" crossorigin="">
+        <link rel="preload" href="assets/font/poppins-v21-latin-600.woff2" fetchpriority="highest" as="font" crossorigin="">
+        <style>
+            @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src: url('assets/font/poppins-v21-latin-regular.woff2') format('woff2');
+            }
+            @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            src: url('assets/font/poppins-v21-latin-500.woff2') format('woff2');
+            }
+            @font-face {
+            font-display: swap;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            src: url('assets/font/poppins-v21-latin-600.woff2') format('woff2');
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="site-logo">
+                    <a href="index.html"><img src="assets/img/logo.svg" alt="" class="img-fluid"></a>
+                </div>
+                <div class="hero-nav">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Why VPN Neer ?</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">Resources</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 448 512">
+                                    <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+                                </svg>
+                                <ul>
+                                    <li>
+                                        <a href="#">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">About VPN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="cancel-btn" onclick="toggleButtons()">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 384 512">
+                                <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3l105.4 105.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256z"/>
+                            </svg>
+                        </div>
+                    </nav>
+                    <div class="search-form">
+                        <form action="">
+                            <input type="search" name="" id="" placeholder="Search here..." required>
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667M14 14l-2.9-2.9" stroke="#86c72c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="toggle-slide-btn" onclick="toggleButtons()">
+                        <svg width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                            <path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32m64 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32m384 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32"/>
+                        </svg>
+                    </div>
+                    <div class="mob-search-btn">
+                        <span class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
+                                <path d="M7.333 12.667A5.333 5.333 0 1 0 7.333 2a5.333 5.333 0 0 0 0 10.667M14 14l-2.9-2.9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="header-btn">
+                        <a href="#" class="btn">Download VPN</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- hero section starts -->
+            <div class="hero-bg">
+                <div class="container">
+                    <div class="row row-gap align-items-center">
+                        <div class="col-lg-7">
+                            <div class="hero-content">
+                                <div class="hero-title">The best VPN for <span>speed and security</span></div>
+                                <div class="hero-sub-title">Stay safe. Play fast. Try Proton VPN today</div>
+                                <ul class="vpn-list">
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#a)" stroke="#35ad45" stroke-width="1.057" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M14.538 7.417v.608a6.608 6.608 0 1 1-3.918-6.04"/>
+                                                <path d="M14.538 2.739 7.93 9.354 5.948 7.37"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="a">
+                                                    <path fill="#fff" d="M0 .095h15.86v15.86H0z"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        VPN Connected
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#a)" stroke="#35ad45" stroke-width="1.057" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M14.538 7.417v.608a6.608 6.608 0 1 1-3.918-6.04"/>
+                                                <path d="M14.538 2.739 7.93 9.354 5.948 7.37"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="a">
+                                                    <path fill="#fff" d="M0 .095h15.86v15.86H0z"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        VPN Connected
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#a)" stroke="#35ad45" stroke-width="1.057" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M14.538 7.417v.608a6.608 6.608 0 1 1-3.918-6.04"/>
+                                                <path d="M14.538 2.739 7.93 9.354 5.948 7.37"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="a">
+                                                    <path fill="#fff" d="M0 .095h15.86v15.86H0z"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        VPN Connected
+                                    </li>
+                                </ul>
+                                <div class="hero-btn"><a href="#" class="btn">Get VPN Now</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 md-center">
+                            <img src="assets/img/hero-img.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Parnters slider section starts -->
+            <div class="logo-slider">
+                <div class="container">
+                    <div class="slider partners-slider">
+                        <div class="slider-wrap">
+                            <div class="slide-card"><img src="assets/img/partner-1.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-2.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-3.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-4.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-5.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-6.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-1.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-2.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-3.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-4.svg" class="img-fluid"></div>
+                            <div class="slide-card"><img src="assets/img/partner-5.svg" class="img-fluid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Services section starts -->
+            <div class="mt-auto service-bg">
+                <div class="container">
+                    <div class="section-title title-center">
+                        <div class="heading">Reasons Behind VPN's Superior VPN Network</div>
+                        <p>A precise approach to get it done. Well, we have got you. Here, you will get the quickest and most appropriate methods to gear up your OnlyFans Search game. You must know this search engine lacks a ready-to-go OnlyFans user account.</p>
+                    </div>
+                    <div class="row row-gap">
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <img src="assets/img/ser-1.svg" class="img-fluid">
+                                <div class="service-content">
+                                    <div class="service-title">Parental Controls</div>
+                                    <p>A precise approach to get it done. Well, we have got you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <img src="assets/img/ser-2.svg" class="img-fluid">
+                                <div class="service-content">
+                                    <div class="service-title">Advanced Encryption</div>
+                                    <p>A precise approach to get it done. Well, we have got you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <img src="assets/img/ser-3.svg" class="img-fluid">
+                                <div class="service-content">
+                                    <div class="service-title">Threat Protection</div>
+                                    <p>A precise approach to get it done. Well, we have got you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <img src="assets/img/ser-4.svg" class="img-fluid">
+                                <div class="service-content">
+                                    <div class="service-title">Faster Downloads</div>
+                                    <p>A precise approach to get it done. Well, we have got you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Get VPN Now</a>
+                </div>
+            </div>
+            <!-- VPN Privacy section starts -->
+            <div class="gray-bg">
+                <div class="container">
+                    <div class="row row-gap align-items-center justify-content-between">
+                        <div class="col-lg-7">
+                            <div class="section-title">
+                                <div class="heading">Seeking the best VPN for privacy protection ?</div>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 md-center">
+                            <img src="assets/img/block-img.svg" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shape section starts -->
+            <div class="shape-bg">
+                <div class="container">
+                    <div class="row row-gap align-items-center justify-content-between">
+                        <div class="col-lg-5 md-center order-md">
+                            <img src="assets/img/channels.svg" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="section-title">
+                                <div class="heading">Want to access your favorite online content ?</div>
+                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Service bg section starts -->
+            <div class="half-bg mt-auto">
+                <div class="container">
+                    <div class="row row-gap align-items-center">
+                        <div class="col-lg-4">
+                            <div class="section-title mb-0">
+                                <div class="heading">Best VPN Network Period</div>
+                                <p>Our servers are hand-picked, security-hardened and self-maintained. Enjoy an uninterrupted browsing and streaming experience.</p>
+                                <a href="#" class="btn">Explore Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="overlap-bg">
+                                <div class="row row-gap-4">
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <img src="assets/img/b1.svg" class="img-fluid">
+                                            <div class="service-content">
+                                                <div class="service-title">Technical Expertise</div>
+                                                <p>It is a long a reader will distracted reader never.</p>
+                                                <a href="#" class="blog-btn">Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <img src="assets/img/b2.svg" class="img-fluid">
+                                            <div class="service-content">
+                                                <div class="service-title">Threat Protection</div>
+                                                <p>It is a long a reader will distracted reader never.</p>
+                                                <a href="#" class="blog-btn">Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <img src="assets/img/b3.svg" class="img-fluid">
+                                            <div class="service-content">
+                                                <div class="service-title">Advanced Encryption</div>
+                                                <p>It is a long a reader will distracted reader never.</p>
+                                                <a href="#" class="blog-btn">Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <img src="assets/img/b4.svg" class="img-fluid">
+                                            <div class="service-content">
+                                                <div class="service-title">Faster Downloads</div>
+                                                <p>It is a long a reader will distracted reader never.</p>
+                                                <a href="#" class="blog-btn">Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- blog section starts -->
+            <div class="mt-auto">
+                <div class="container">
+                    <div class="section-title align">
+                        <div class="heading">Our Popular Blogs</div>
+                        <a href="#" class="btn">Explore All Now</a>
+                    </div>
+                    <div class="row row-gap">
+                        <div class="col-lg-6">
+                            <div class="overlay-card">
+                                <div class="blog-img">
+                                    <img src="https://getassist.net/wp-content/uploads/2024/03/bets-assignment.webp" class="img-fluid">
+                                </div>
+                                <div class="blog-content">
+                                    <a href="#" class="cat-a">Category</a>
+                                    <div class="date">24 December 2024</div>
+                                    <a href="#" class="blog-title fs-lg">Protect Your Online Privacy with Our Reliable VPN Service.</a>
+                                    <p class="ellipsis">
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row row-gap">
+                                <div class="col-lg-12">
+                                    <div class="overlay-card">
+                                        <div class="blog-img">
+                                            <img src="https://getassist.net/wp-content/uploads/2024/05/social-media-privacy.webp" class="img-fluid">
+                                        </div>
+                                        <div class="blog-content">
+                                            <a href="#" class="cat-a">Category</a>
+                                            <div class="date">24 December 2024</div>
+                                            <a href="#" class="blog-title">Protect Your Online Privacy with Our Reliable VPN Service - Stay Secure Anywhere !</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="row row-gap">
+                                        <div class="col-md-6">
+                                            <div class="overlay-card d-height">
+                                                <div class="blog-img">
+                                                    <img src="https://getassist.net/wp-content/uploads/2024/02/gmail-in-office.webp" class="img-fluid">
+                                                </div>
+                                                <div class="blog-content">
+                                                    <a href="#" class="cat-a">Category</a>
+                                                    <a href="#" class="blog-title">Protect Your Online Stay Secure Anywhere !</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="overlay-card d-height">
+                                                <div class="blog-img">
+                                                    <img src="https://getassist.net/wp-content/uploads/2024/04/internet-proxies.webp" class="img-fluid">
+                                                </div>
+                                                <div class="blog-content">
+                                                    <a href="#" class="cat-a">Category</a>
+                                                    <a href="#" class="blog-title">Our Reliable VPN Service - Stay Secure.</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- faq section starts -->
+            <div class="mt-auto">
+                <div class="container">
+                    <div class="section-title title-center">
+                        <div class="heading">Do You Have Any Questions ?</div>
+                    </div>
+                    <div class="row row-gap align-items-center">
+                        <div class="col-lg-5 md-center order-md-1">
+                            <img src="assets/img/faqs.svg" class="img-fluid">
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="faq m-0">
+                                <details>
+                                    <summary>
+                                        Why do some people have photographic memories ?
+                                    </summary>
+                                    <div class="content">
+                                        <p>To submit a question, use our intuitive interface. Provide details about your query, and our system guides you effortlessly through the process, ensuring a smooth experience from start to finish. Our platform is designed to make it easy for you to get the answers you need, when you need them.</p>
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary>
+                                        Why do some people have photographic memories ?
+                                    </summary>
+                                    <div class="content">
+                                        <p>To submit a question, use our intuitive interface. Provide details about your query, and our system guides you effortlessly through the process, ensuring a smooth experience from start to finish. Our platform is designed to make it easy for you to get the answers you need, when you need them.</p>
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary>
+                                        Why do some people have photographic memories ?
+                                    </summary>
+                                    <div class="content">
+                                        <p>To submit a question, use our intuitive interface. Provide details about your query, and our system guides you effortlessly through the process, ensuring a smooth experience from start to finish. Our platform is designed to make it easy for you to get the answers you need, when you need them.</p>
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary>
+                                        Why do some people have photographic memories ?
+                                    </summary>
+                                    <div class="content">
+                                        <p>To submit a question, use our intuitive interface. Provide details about your query, and our system guides you effortlessly through the process, ensuring a smooth experience from start to finish. Our platform is designed to make it easy for you to get the answers you need, when you need them.</p>
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary>
+                                        Why do some people have photographic memories ?
+                                    </summary>
+                                    <div class="content">
+                                        <p>To submit a question, use our intuitive interface. Provide details about your query, and our system guides you effortlessly through the process, ensuring a smooth experience from start to finish. Our platform is designed to make it easy for you to get the answers you need, when you need them.</p>
+                                    </div>
+                                </details>
+                                <details>
+                                    <summary>
+                                        Why do some people have photographic memories ?
+                                    </summary>
+                                    <div class="content">
+                                        <p>To submit a question, use our intuitive interface. Provide details about your query, and our system guides you effortlessly through the process, ensuring a smooth experience from start to finish. Our platform is designed to make it easy for you to get the answers you need, when you need them.</p>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Section starts -->
+            <!-- <div class="mt-auto alternative-bg">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="sub-heading">Testimonial</div>
+                        <div class="heading">What Saying Our Customers ?</div>
+                    </div>
+                    <div class="slider testimonial-slider">
+                        <div class="slider-wrap">
+                            <div class="slide-card">
+                                <div class="testimonial-card">
+                                    <div class="client">
+                                        <img src="https://demo.bravisthemes.com/muntech/wp-content/uploads/2021/11/robert.png" class="img-fluid">
+                                        <div class="info">
+                                            <div class="name">John Ambrose</div>
+                                            <span>Senior Manager</span>
+                                        </div>
+                                    </div>
+                                    <p>Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas !</p>
+                                </div>
+                            </div>
+                            <div class="slide-card">
+                                <div class="testimonial-card">
+                                    <div class="client">
+                                        <img src="https://demo.bravisthemes.com/muntech/wp-content/uploads/2021/11/robert.png" class="img-fluid">
+                                        <div class="info">
+                                            <div class="name">John Ambrose</div>
+                                            <span>Senior Manager</span>
+                                        </div>
+                                    </div>
+                                    <p>Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas !</p>
+                                </div>
+                            </div>
+                            <div class="slide-card">
+                                <div class="testimonial-card">
+                                    <div class="client">
+                                        <img src="https://demo.bravisthemes.com/muntech/wp-content/uploads/2021/11/robert.png" class="img-fluid">
+                                        <div class="info">
+                                            <div class="name">John Ambrose</div>
+                                            <span>Senior Manager</span>
+                                        </div>
+                                    </div>
+                                    <p>Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas !</p>
+                                </div>
+                            </div>
+                            <div class="slide-card">
+                                <div class="testimonial-card">
+                                    <div class="client">
+                                        <img src="https://demo.bravisthemes.com/muntech/wp-content/uploads/2021/11/robert.png" class="img-fluid">
+                                        <div class="info">
+                                            <div class="name">John Ambrose</div>
+                                            <span>Senior Manager</span>
+                                        </div>
+                                    </div>
+                                    <p>Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas !</p>
+                                </div>
+                            </div>
+                            <div class="slide-card">
+                                <div class="testimonial-card">
+                                    <div class="client">
+                                        <img src="https://demo.bravisthemes.com/muntech/wp-content/uploads/2021/11/robert.png" class="img-fluid">
+                                        <div class="info">
+                                            <div class="name">John Ambrose</div>
+                                            <span>Senior Manager</span>
+                                        </div>
+                                    </div>
+                                    <p>Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas !</p>
+                                </div>
+                            </div>
+                            <div class="slide-card">
+                                <div class="testimonial-card">
+                                    <div class="client">
+                                        <img src="https://demo.bravisthemes.com/muntech/wp-content/uploads/2021/11/robert.png" class="img-fluid">
+                                        <div class="info">
+                                            <div class="name">John Ambrose</div>
+                                            <span>Senior Manager</span>
+                                        </div>
+                                    </div>
+                                    <p>Patience. Infinite patience. No shortcuts. Very well thought out and articulate communication. Clear milestones, deadlines and fast work. Even if the client is being careless. The best part...always solving problems with great original ideas !</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-container">
+                            <button class="button-prev" id="previous-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="20" fill="#35ad45">
+                                    <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H109.3l73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/>
+                                </svg>
+                            </button>
+                            <button class="button-next" id="next-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="20" fill="#35ad45">
+                                    <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l73.4 73.4H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h370.7l-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div> -->
+        </main>
+        <!-- Footer section starts -->
+        <footer>
+            <div class="container">
+                <div class="row row-gap">
+                    <div class="col-lg-4">
+                        <div class="footer-left site-logo">
+                            <img src="assets/img/logo.svg" class="img-fluid">
+                            <div class="newsletter">
+                                <div class="list-heading">Subscribe Newsletter</div>
+                                <form action="">
+                                    <input type="search" name="" id="" placeholder="Enter your email..." required="">
+                                    <button type="submit" class="btn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="#fff">
+                                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                            <p>Email at: &nbsp;<a href="mailto:infoVpneer.com">infoVpneer.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer-right">
+                            <div class="row row-gap">
+                                <div class="col-md-4">
+                                    <div class="list-heading">Company</div>
+                                    <ul>
+                                        <li><a href="#">PF Software</a></li>
+                                        <li><a href="404.html">404 page</a></li>
+                                        <li><a href="author-details.html">Author Details</a></li>
+                                        <li><a href="authors.html">Authors Profile</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="list-heading">Benifit</div>
+                                    <ul>
+                                        <li><a href="#">PF Software</a></li>
+                                        <li><a href="category.html">Category Page</a></li>
+                                        <li><a href="contact.html">Contact Page</a></li>
+                                        <li><a href="result.html">Result Page</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="list-heading">Resources</div>
+                                    <ul>
+                                        <li><a href="#">PF Software</a></li>
+                                        <li><a href="search.html">Search Page</a></li>
+                                        <li><a href="single.html">Blog Page</a></li>
+                                        <li><a href="thankyou.html">Thankyou Page</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bottom-category">
+                                <ul>
+                                    <li><a href="single.html">Blog</a></li>
+                                    <li><a href="#">Case</a></li>
+                                    <li><a href="#">StudiesHR</a></li>
+                                    <li><a href="#">Grosarry</a></li>
+                                    <li><a href="#">ORK Examples</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btm-footer">
+                <div class="container">
+                    <div class="media">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="18" height="18" fill="#1877f2">
+                                        <path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18" fill="#fff">
+                                        <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="18" height="18" fill="#0a66c2">
+                                        <path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3M447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="18" height="18" fill="#bd081c">
+                                        <path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Copyright 2024. Battersea Web Experts</p>
+                </div>
+            </div>
+        </footer>
+        <!-- back to top btn -->
+        <div class="top-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+                <path d="M246.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 109.3l137.4 137.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160zm160 352-160-160c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L224 301.3l137.4 137.3c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3z"/>
+            </svg>
+        </div>
+        <!-- js file attached -->
+        <script defer src="assets/js/main.js"></script>
+    </body>
+</html>
